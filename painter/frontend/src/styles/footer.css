@@ -1,0 +1,93 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1b1f95; /* Blue background */
+    color: white;
+    padding: 20px 50px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 0 20px;
+  }
+  
+  .footer-logo {
+    height: 50px; /* Adjust logo height */
+    
+  }
+  
+  .footer-description {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .footer-socials a {
+    display: inline-flex; /* Permet d'aligner correctement les icônes */
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Taille du cadre */
+    height: 40px; /* Taille du cadre */
+    border-radius: 50%; /* Crée un cadre rond */
+    background-color: #f0f0f0; /* Couleur de fond du cadre */
+    margin: 0 10px; /* Espacement entre les icônes */
+    transition: all 0.3s ease; /* Transition pour l'effet hover */
+  }
+  
+  .footer-socials a:hover {
+    background-color:none; /* Change la couleur de l'icône au survol */
+    transform: scale(1.1); /* Agrandit légèrement l'icône au survol */
+  }
+  
+  
+  .footer-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer-areas {
+    display: flex;
+  }
+  
+  .footer-areas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 20px 0 0;
+  }
+  
+  .footer-areas li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-email {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+  
+  .footer-subscribe {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .footer-subscribe input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 200px;
+  }
+  
+  .footer-subscribe button {
+    background-color: #11138b; /* Slightly darker blue */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  .footer-subscribe button i {
+    font-size: 1rem;
+  }
+  
