@@ -1,8 +1,8 @@
 import React from "react";
 import { FaFacebookF } from "react-icons/fa6";
-import { BiLogoInstagram } from "react-icons/bi";
+import { BsInstagram } from "react-icons/bs";
 import { RiLinkedinFill } from "react-icons/ri";
-import logo from '../assets/Logo_Resized03.png'; // Ensure the path is correct
+import logo from '../assets/logo/3.png'; // Ensure the path is correct
 
 import "../styles/footer.css"
 import ContactForm from "./ContactForm.jsx";
@@ -10,28 +10,31 @@ import ContactForm from "./ContactForm.jsx";
 const Footer = () => {
   return (
     <footer className="footer">
+      <div className="footer-fond">
       <div className="footer-section">
         <img src={logo} alt="BrandAid Painting Logo" className="footer-logo" />
-        <p className="footer-description">
-          Behind the word mountains, far from the countries Vokalia and
-          Consonantia, there live the blind texts they live
-        </p>
+        <div className="footer-description">
+        <h1>Bran aid
+        painting</h1>
+        <p>Painting , wall decoration , wood floor</p>
         <div className="footer-socials">
+        <a
+            href="https://www.instagram.com" target="blank" rel="noopener noreferrer"
+            style={{ color: 'white', fontSize: '20px' }} >
+            <BsInstagram />
+          </a>
           <a
             href="https://facebook.com" aria-label="Facebook" target="blank"
-            style={{ color: 'blue', fontSize: '20px' }} >
+            style={{ color: 'white', fontSize: '20px' }} >
             <FaFacebookF />
           </a>
-          <a
-            href="https://www.instagram.com" target="blank" rel="noopener noreferrer"
-            style={{ color: '#1b1f95', fontSize: '20px' }} >
-            <BiLogoInstagram />
-          </a>
+         
           <a
             href="https://www.linkedin.com" target="blank" rel="noopener noreferrer"
-            style={{ color: 'blue', fontSize: '20px' }}>
+            style={{ color: 'white', fontSize: '20px' }}>
             <RiLinkedinFill />
           </a>
+        </div>
         </div>
       </div>
       <div className="footer-section">
@@ -63,6 +66,7 @@ const Footer = () => {
         <div className="footer-subscribe">
           <ContactForm />
         </div>
+      </div>
       </div>
     </footer>
   );

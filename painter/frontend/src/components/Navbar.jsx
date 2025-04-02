@@ -3,7 +3,7 @@ import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa'; // Import Facebook a
 import { RiInstagramFill } from 'react-icons/ri'; // Corrected import for Instagram icon
 import { IoMdArrowDropdown } from "react-icons/io"; // Import the correct dropdown arrow icon
 import '../styles/navbar.css';
-import logo from '../assets/Logo_Resized03.png'; // Ensure the path is correct
+import logo from '../assets/logo/3.png'; // Ensure the path is correct
 
 function Navbar() {
   return (
@@ -33,11 +33,16 @@ function Navbar() {
       <div className="navbar-bottom">
         <img src={logo} alt="BrandAid Painting Logo" className="navbar-logo" />
         <ul className="navbar-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About Us</a></li>
-          {/* Services with Arrow */}
+          <li><a href="/">
+          <button className='btnHome'>HOME</button></a></li>
+          <li><a href="/about">
+          <button className="bntAbout">About Us</button> </a></li>
+          {/* Services with Arrow */} 
           <li className="dropdown">
-            <a href="/services">Services <IoMdArrowDropdown size={16} /> </a> {/* Corrected icon name */}
+            <a href="/services">
+            <button className="btnServices">Services <IoMdArrowDropdown size={16} /> 
+            </button></a> {/* Corrected icon name */}
+            
             <div className="dropdown-content">
               <ul>
                 <li><a href="/hello">Interior House Painting</a></li>
@@ -46,8 +51,12 @@ function Navbar() {
               </ul>
             </div>
           </li>
-          <li><a href="/contact">Contact Us</a></li>
-          <li><a href="/gallery">Gallery</a></li>
+          <li><a href="/contact">
+          <button className="btnHome">Contact Us</button>
+          </a></li>
+          <li><a href="/gallery">
+          <button className="bntAbout">Gallery </button>
+          </a></li>
         </ul>
       </div>
     </nav>

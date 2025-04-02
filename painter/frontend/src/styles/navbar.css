@@ -1,8 +1,8 @@
 /* General styles for the navbar */
 .navbar {
+  background-color: rgb(252, 252, 118)  ;
   display: flex;
   flex-direction: column;
-  background-color: #fff; /* White background */
   color: #333; /* Dark text color */
   font-family: Arial, sans-serif;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -12,13 +12,13 @@
   padding: 0;
 }
 
+
 /* Top section: Contact information and social media */
 .navbar-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #f8f8f8; /* Light gray background */
   border-bottom: 1px solid #ddd; /* Subtle border */
   width: 100%; /* Full width */
   box-sizing: border-box;
@@ -28,18 +28,16 @@
   font-size: 14px;
   display: flex;
   gap: 15px;
+  a {
+    text-decoration: none;
+    color: #000000; /* Blue links */
+    transition: color 0.3s ease;
 }
 
-.contact a {
-  text-decoration: none;
-  color: #007BFF; /* Blue links */
-  transition: color 0.3s ease;
-}
-
-.contact a:hover {
+ a:hover {
   color: #0056b3; /* Darker blue on hover */
 }
-
+}
 .socialmedia {
   display: flex;
   gap: 10px;
@@ -62,13 +60,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 0px 20px;
   width: 100%; /* Full width */
   box-sizing: border-box;
 }
 
 .navbar-logo {
-  height: 50px; /* Adjust logo height */
+  height: 80px; /* Adjust logo height */
+  width: 300px;
+  margin: 0;
 }
 
 .navbar-links {
@@ -77,24 +77,96 @@
   margin: 0;
   padding: 0;
   gap: 20px;
+  a {
+    text-decoration: none;
+    color: #333; /* Dark text */
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
 }
-
-.navbar-links li {
-  font-size: 16px;
-}
-
-.navbar-links a {
-  text-decoration: none;
-  color: #333; /* Dark text */
-  padding: 5px 10px;
-  transition: color 0.3s ease, background-color 0.3s ease;
-}
-
 .navbar-links a:hover {
   color: #fff;
-  background-color: #007BFF; /* Blue background on hover */
   border-radius: 5px;
 }
+.btnHome{
+  background-color: rgba(203, 100, 123, 1);
+color: rgba(245, 203, 61, 1);
+font-family: Arial, sans-serif;
+font-weight: bold;
+font-size: 20px;
+letter-spacing: 2px;
+text-align: center;
+padding: 0px 20px; /* Space inside the button */
+border: none; /* Border color and width */
+border-radius: 5px; /* Rounded corners */
+cursor: pointer; /* Pointer cursor on hover */
+transition: all 0.5s ease; /* Smooth transition on hover */
+}
+.btnHome:hover{
+  background-color: rgba(245, 203, 61, 1); /* Change to yellow on hover */
+  color: rgba(203, 100, 123, 1); /* Change text color to the original pinkish color */
+  transform: scale(1.1); /* Slightly increase size */
+}
+
+.bntAbout{
+  background-color: rgba(94, 166, 211, 1);
+color: rgba(255, 255, 255, 1);
+font-family: Arial, sans-serif;
+font-weight: bold;
+text-transform: uppercase;
+font-size: 20px;
+letter-spacing: 2px;
+text-align: center;
+padding: 0px 20px; /* Space inside the button */
+border: none; /* Border color and width */
+border-radius: 5px; /* Rounded corners */
+cursor: pointer; /* Pointer cursor on hover */
+transition: all 0.5s ease; /* Smooth transition on hover */
+}
+.bntAbout:hover{
+  background-color: rgba(245, 203, 61, 1); /* Change to yellow on hover */
+  color: rgba(94, 166, 211, 1); /* Change text color to the original pinkish color */
+  transform: scale(1.1); /* Slightly increase size */
+}
+.btnServices {
+  background-color: rgba(180,214,205,255);
+color: rgba(21,68,75,255);
+font-family: Arial, sans-serif;
+font-weight: bold;
+text-transform: uppercase;
+font-size: 20px;
+letter-spacing: 2px;
+text-align: center;
+padding: 0px 20px; /* Space inside the button */
+border: none; /* Border color and width */
+border-radius: 5px; /* Rounded corners */
+cursor: pointer; /* Pointer cursor on hover */
+transition: all 0.5s ease; /* Smooth transition on hover */
+
+}
+.btnServices:hover{
+  background-color: rgba(245, 203, 61, 1); /* Change to yellow on hover */
+  color: rgba(94, 166, 211, 1); /* Change text color to the original pinkish color */
+  transform: scale(1.1); /* Slightly increase size */
+}
+.dropdown-content{
+  a{
+  background-color: rgba(180,214,205,255);
+color: rgba(21,68,75,255);
+font-family: Arial, sans-serif;
+font-weight: bold;
+text-transform: uppercase;
+font-size: 16px;
+letter-spacing: 2px;
+text-align: center;
+border: none; /* Border color and width */
+border-radius: 5px; /* Rounded corners */
+cursor: pointer; /* Pointer cursor on hover */
+}
+}
+
+
 
 /* Responsive design */
 @media (max-width: 768px) {
@@ -124,23 +196,19 @@
   position: relative;
   display: inline-block;
 }
-
+/*import*/
 .dropdown-content {
   display: none;
-  background-color: #f1f1f1;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
+/*import*/
 
 .dropdown-content a {
-  color: black;
   padding: 12px 16px;
-  text-decoration: none;
   display: block;
 }
-
-.dropdown-content a:hover {background-color: #ddd;}
 
 .dropdown:hover .dropdown-content {display: block;}
 

@@ -20,7 +20,7 @@ function App() {
       <span className="whatsapp-icon">
         <FaWhatsapp size={40} color="white" /> {/* WhatsApp icon */}
         </span>
-        <p style={{ textDecorationLine: 'none' }}>How can I help you?</p>
+        <p>How can I help you?</p>
 
     </button>
       </a>

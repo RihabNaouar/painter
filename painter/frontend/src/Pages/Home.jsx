@@ -1,55 +1,46 @@
-import React from 'react';
-import '../styles/home.css'
-import pict1 from '../assets/rouleau_peinture_plafond.jpg'
-import Card from 'react-bootstrap/Card';
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import "../styles/home.css";
+import Slideshow from "../components/Slideshow.jsx";
+
+// OPTION 1: Si les images sont dans src/assets/
+import col1 from "../assets/col1.png";
+import col2 from "../assets/col2.png";
+import col3 from "../assets/col3.png";
+
+
 function Home() {
   return (
-    
-    <div className="hero-section">
+    <div className="home">
+      {/* Section 1 */}
       <div className="part1">
-      <div className="picture1">
-      <img src={pict1} alt="Pict1"  />
+        <div className="animated-text">
+          <h1>Brand Aid Providing Best Painting Services for a Brighter Home.</h1>
+          <p>From Interior Perfection to Exterior Excellence</p>
+        </div>
       </div>
-      <div className="content">
-        <h1>
-          Brand aid Providing Best Painting Services for a Brighter Home.
-          </h1>
-          <p>Elevate Your Home's Curb Appeal with Expert Exterior Painting—Durable, Beautiful, and Built to Last
-          </p>
-          </div>
-          </div>
-          <div className="part2">
-  <div className="text">
-    <Card style={{ width: '18rem' }}>
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-      </Card.Body>
-    </Card>
-  </div>
-  <div 
-    className="video" 
-  >
-    <iframe
-      src="https://www.youtube.com/embed/W4CzFda1ECs"
-      title="YouTube video player"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowFullScreen
-    ></iframe>
-  </div>
-</div>
-<div className="part3">
-  <h1>25 years of interior painting expertise</h1>
-  <p>
-  With over 25 years of interior painting expertise, 
-  our painting crews know exactly what to do to get the
-  job done quickly and to a high standard.
-  </p>
-</div>
-   </div>
+
+      <Container className="part2">
+        <Row>
+          <Col>
+            <Slideshow images={[
+              { src: col1 },
+              { src: col2 },
+              { src: col3}
+            ]} />
+          </Col>
+          <Col>
+            <h1>Why Choose Us?</h1>
+            <p>
+              At Brandaid Painting, we believe that the quality of your home’s exterior is a reflection of your pride and attention to detail.
+              Our premium paint solutions are designed to offer the best in durability, beauty, and environmental consciousness.
+              With our expert team and superior products, we ensure that your home not only looks stunning but is also protected against the elements
+              for years to come. Trust us to elevate your home’s curb appeal and provide you with a finish that you’ll love for a lifetime.
+            </p>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 }
 

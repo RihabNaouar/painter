@@ -1,45 +1,71 @@
-
-  .picture1{
-    position: relative; 
-img {
-width: 100%;
-height: 500px;
-}
-  }
-  .content{
-    position: absolute;
-    top: 30%;
-    left: 5%;
-    z-index: 1;
-    color: rgb(138, 12, 12);
-    font-size: 20px;
+.part1 {
+   
+    background-image: url(../assets/homeBackgroun.jpeg);
+    background-size: cover;
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Makes the background stay fixed during scrolling */
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(to right, #251401,#6a3a03, #b16003, #a15804, #d77504); /* Dégradé de foncé à clair */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: bold;
-    h1,  p{
-      letter-spacing: -2px;
-    }  
-  }
+    width: 700px;
+    margin: 10px 0px;
+    padding: 0 30px 0 0;
+}
+p{  
+    background: linear-gradient(to right, #170d01, #251401,#6a3a03); /* Dégradé de foncé à clair */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    width: 700px;
+    word-spacing: 10 px;
+    margin: 10px 0px;
+    padding: 0 30px 0 0;
 
-  .part2 {
+}
+}@keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    80% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    
+    100% {
+      transform: translateX(0);
+    }
+}
+
+.animated-text {
+ 
+  animation: slideInLeft 1s ease-out forwards;
+}
+.part2{
+  margin: 0 150px 
+}
+ .row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px; /* Espacement entre les éléments */
   }
   
-  .text {
-    flex: 1; /* Permet à la carte de prendre de l'espace disponible */
-    margin-left: 150px;
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px; /* Optional rounded corners */
   }
   
-  .video {
-    flex: 1; /* Permet à la vidéo de prendre de l'espace disponible */
-    display: flex;
-    justify-content: center; /* Centre la vidéo horizontalement */
-    align-items: center; /* Centre la vidéo verticalement */
+  .col {
+    padding: 20px;
+    flex: 1;
   }
   
-  iframe {
-    width: 100%; /* La largeur de l'iframe occupe tout l'espace disponible */
-    max-width: 500px; /* Limite la taille maximale */
-    height: 250px; /* Ajuste la hauteur de la vidéo */
-  }

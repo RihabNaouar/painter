@@ -1,63 +1,119 @@
 .footer {
+   
+    background-image: url(../assets//backgroundnavbar.png);
+    background-size: cover;
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Makes the background stay fixed during scrolling */
+    height: 400px;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-fond{
+    background-color: rgba(146, 115, 12, 0.65); /* Fond semi-transparent */
+    color: white;
     display: flex;
     justify-content: space-between;
-    background-color: #1b1f95; /* Blue background */
-    color: white;
-    padding: 20px 50px;
-    font-family: Arial, sans-serif;
-  }
-  
+    padding: 10px ; /* Espacement interne */    
+    border-radius: 16px; /* Coins arrondis */
+    width: 90%; /* Largeur du conteneur */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optionnel : ombre pour détacher visuellement */
+}
   .footer-section {
     flex: 1;
     margin: 0 20px;
   }
   
   .footer-logo {
-    height: 50px; /* Adjust logo height */
+    height: 70px; /* Adjust logo height */
+    margin : 0px 15px 15px 15px;
     
   }
   
   .footer-description {
-    margin-top: 10px;
-    font-size: 0.9rem;
-    line-height: 1.5;
+    h1{
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 3rem;
+      margin: 10px 0px;
+      padding: 0 30px 0 0;
+      align-items: center; /* Centre verticalement */
+      word-spacing: -2px;
+    }
+    p{
+      font-family: Tahoma, sans-serif;
+      font-size: 1em  ;
+      word-spacing: 2px;
+
+    }
   }
   
   .footer-socials a {
-    display: inline-flex; /* Permet d'aligner correctement les icônes */
+    display: inline-flex;  /*Permet d'aligner correctement les icônes */
     justify-content: center;
     align-items: center;
-    width: 40px; /* Taille du cadre */
-    height: 40px; /* Taille du cadre */
+    width: 40px;  /*Taille du cadre */
+    height: 40px;  /*Taille du cadre */
     border-radius: 50%; /* Crée un cadre rond */
-    background-color: #f0f0f0; /* Couleur de fond du cadre */
     margin: 0 10px; /* Espacement entre les icônes */
-    transition: all 0.3s ease; /* Transition pour l'effet hover */
-  }
+    transition: all 0.3s ease;  /*Transition pour l'effet hover */ }
   
   .footer-socials a:hover {
-    background-color:none; /* Change la couleur de l'icône au survol */
+    background-color:none; /*Change la couleur de l'icône au survol*/ 
     transform: scale(1.1); /* Agrandit légèrement l'icône au survol */
   }
   
   
   .footer-title {
+ 
     font-size: 1.3rem;
     margin-bottom: 10px;
+    font-family: Georgia;
+    margin:10px 15px 20px 15px;
+    font-size: 2.2em
+  
   }
   
   .footer-areas {
     display: flex;
   }
+  .footer-areas {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin-top: 40px;
+  
+  }
   
   .footer-areas ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
-    margin: 0 20px 0 0;
+    margin: 0;
   }
   
   .footer-areas li {
-    margin-bottom: 5px;
+    font-size: 15px;
+    line-height: 1.3;
+    color: #ffffff;
+  }
+  
+  .footer-areas ul li:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-areas {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .footer-areas ul {
+      margin-bottom: 20px;
+    }
   }
   
   .footer-email {
@@ -79,14 +135,19 @@
   }
   
   .footer-subscribe button {
-    background-color: #11138b; /* Slightly darker blue */
+    background-color: #807e01;  
     color: white;
     border: none;
     padding: 10px;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
+    transition: all 0.3s ease;
   }
-  
+  .footer-subscribe button:hover{
+
+    background-color:none; /*Change la couleur de l'icône au survol*/ 
+    transform: scale(1.1); /* Agrandit légèrement l'icône au survol */
+  } 
   .footer-subscribe button i {
     font-size: 1rem;
   }
